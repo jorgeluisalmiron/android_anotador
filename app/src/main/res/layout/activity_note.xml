@@ -5,13 +5,9 @@ xmlns:tools="http://schemas.android.com/tools"
 android:layout_width="match_parent"
 android:layout_height="match_parent"
 android:fitsSystemWindows="true"
-tools:context="com.example.jorgeluis.libretadealmacenero.MainActivity">
+tools:context="com.example.jorgeluis.anotador.MainActivity">
 
-    <!--ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/imageButton"
-        android:tint="#49fe01" /-->
+
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -80,12 +76,12 @@ tools:context="com.example.jorgeluis.libretadealmacenero.MainActivity">
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/editText2"
+            android:id="@+id/editTextNoteTitle"
             android:digits="abcdefghijklmnñopqrstuvwxyz1234567890ABCDEFGHIJKLMNÑOPQRSTUVWXYZ-_"
             android:hint="Título de la nota"
-            android:textColor="#000000"
-            android:textStyle="bold|italic"
-            android:textSize="25sp"
+            android:textColor="#dbe0e3"
+            android:textStyle="italic"
+            android:textSize="20sp"
 
 
             />
@@ -95,7 +91,7 @@ tools:context="com.example.jorgeluis.libretadealmacenero.MainActivity">
             android:layout_height="match_parent"
             android:inputType="text|textImeMultiLine|textMultiLine"
             android:ems="10"
-            android:id="@+id/editText"
+            android:id="@+id/editTextNoteContent"
             android:textColor="#000000"
             android:gravity="top|left"
             android:linksClickable="true"

@@ -1,4 +1,4 @@
-package com.example.jorgeluis.libretadealmacenero;
+package com.example.jorgeluis.anotador;
 
 import org.junit.Test;
 

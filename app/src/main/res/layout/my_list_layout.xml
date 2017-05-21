@@ -6,20 +6,15 @@
     android:orientation="vertical"
     android:padding="10dp">
 
-
-
-
     <TextView
-        android:id="@+id/TextViewNombre"
-        android:text="test 1"
+        android:id="@+id/TextViewNoteTitle"
         android:textSize="25sp"
         android:textColor="@color/colorPrimary"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
     <TextView
-        android:id="@+id/TextViewFecha"
-        android:text="test 2"
+        android:id="@+id/TextViewDateTime"
         android:textColor="@android:color/holo_orange_light"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
