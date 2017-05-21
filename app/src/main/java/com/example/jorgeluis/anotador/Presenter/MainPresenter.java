@@ -38,7 +38,14 @@ public class MainPresenter {
     @Subscribe
     public void onResumeMainActivityEvent(MainActivity.onResumeMainActivity event){
 
-        List<Note> listOfNotes = services.retrieveListOfNotes();
+
+        List<Note> listOfNotes = null;
+        try {
+            listOfNotes = services.retrieveListOfNotes();
+        } catch (IOException e) {
+            view.showToastMessage("Error al obtener la lista de notas");
+            view.getActivity().finish();
+        }
         if (listOfNotes==null){
             view.setTextViewEmptyListVisible(true);
             view.setRecyclerViewVisible(false);

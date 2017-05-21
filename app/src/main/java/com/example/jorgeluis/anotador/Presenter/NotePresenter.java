@@ -59,12 +59,8 @@ public class NotePresenter {
             view.setNoteTitle(services.getListOfNotes().get(position).getName());
             view.setNoteContentBackgroundColor(services.getListOfNotes().get(position).getBackgroundColor());
             view.setNoteTitleEnabled(false);
-            try {
-                view.setNoteContent(services.getNoteContent(services.getListOfNotes().get(position).getName()));
-            } catch (IOException e) {
-                view.showToastMessage("Error al obtener la nota");
-            }
-        }
+            view.setNoteContent(services.getListOfNotes().get(position).getContent());
+         }
 
         modifiedNote = false;
     }

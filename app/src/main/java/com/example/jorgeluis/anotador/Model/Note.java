@@ -8,19 +8,18 @@ import java.io.Serializable;
 public class Note implements Serializable{
 
     private String name;
+    private String content;
     private String dateTime;
     private int backgroundColor;
 
 
-    public Note(String n, String d){
-        this.name=n;
-        this.dateTime=d;
-    }
 
-    public Note(String n, String d, int b){
+    public Note(String n, String content, String d, int b){
         this.name=n;
+        this.content = content;
         this.dateTime=d;
         this.backgroundColor=b;
+
     }
 
     public String getName() {
@@ -45,5 +44,14 @@ public class Note implements Serializable{
 
     public void setBackgroundColor(int backgroundColor) {
         this.backgroundColor = backgroundColor;
+    }
+
+
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
     }
 }

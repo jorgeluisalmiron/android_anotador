@@ -79,7 +79,8 @@ tools:context="com.example.jorgeluis.anotador.MainActivity">
             android:id="@+id/editTextNoteTitle"
             android:digits="abcdefghijklmnñopqrstuvwxyz1234567890ABCDEFGHIJKLMNÑOPQRSTUVWXYZ-_"
             android:hint="Título de la nota"
-            android:textColor="#dbe0e3"
+            android:textColorHint="#dbe0e3"
+            android:textColor="#000000"
             android:textStyle="italic"
             android:textSize="20sp"
 
@@ -98,7 +99,7 @@ tools:context="com.example.jorgeluis.anotador.MainActivity">
             android:textIsSelectable="true"
             android:imeOptions="flagNoExtractUi"
             android:shadowColor="@color/colorAccent"
-            android:padding="10px"
+            android:padding="10sp"
             android:scrollbars="vertical"
             android:background="@color/colorNoteDefault"
             />

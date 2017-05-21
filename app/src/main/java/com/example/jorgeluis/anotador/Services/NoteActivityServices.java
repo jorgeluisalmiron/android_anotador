@@ -1,9 +1,7 @@
 package com.example.jorgeluis.anotador.Services;
 
 import com.example.jorgeluis.anotador.Model.Note;
-import com.example.jorgeluis.anotador.Util.AndroidFileManager;
 import com.example.jorgeluis.anotador.Util.FileManager;
-import com.squareup.otto.Bus;
 
 import java.io.IOException;
 import java.io.Serializable;
@@ -19,6 +17,7 @@ public class NoteActivityServices {
 
     private FileManager fileManager;
     private List<Note> listOfNotes;
+    private final String FILE_NAME="notes.dat";
 
     public NoteActivityServices(FileManager fileManager) {
 
@@ -49,50 +48,35 @@ public class NoteActivityServices {
     public int saveNote(String title, String content,int backgroundColor, boolean newNote, int position) throws IOException{
 
             if (title.equals(null) || title.equals("")) {
-
                 return 2;
-            }
-
-            if (listOfNotes.contains(title) && newNote) {
-                return 3;
-
             }
             else
             {
-                addToIndex(title,backgroundColor,newNote,position);
-                fileManager.save(title,content);
+                Date dNow = new Date();
+                SimpleDateFormat ft = new SimpleDateFormat("dd/MM/yyyy HH:mm");
+                if (newNote) {
+                    listOfNotes.add(new Note(title, content, ft.format(dNow).toString(),backgroundColor));
 
-               return 1;
+                }
+                else
+                {
+                    listOfNotes.get(position).setContent(content);
+                    listOfNotes.get(position).setBackgroundColor(backgroundColor);
+
+                }
+                fileManager.saveSerializable((Serializable) listOfNotes, FILE_NAME);
+                return 1;
             }
 
     }
 
 
-    public void addToIndex(String title,int backgroundColor,boolean newNote, int position) throws IOException {
-
-        Date dNow = new Date();
-        SimpleDateFormat ft = new SimpleDateFormat("dd/MM/yyyy HH:mm");
-        if (newNote) {
-            listOfNotes.add(new Note(title, ft.format(dNow).toString(),backgroundColor));
-
-        }
-        else
-        {
-            listOfNotes.get(position).setBackgroundColor(backgroundColor);
-
-        }
-        fileManager.saveSerializable((Serializable) listOfNotes, "index.idx");
-    }
-
-    public String getNoteContent(String noteTitle) throws IOException{
-
-       return fileManager.readTextFile(noteTitle);
-    }
 
     public boolean deleteNote(int position) throws IOException {
-        String fileName = listOfNotes.get(position).getName();
+
         listOfNotes.remove(position);
-        fileManager.saveSerializable((Serializable) listOfNotes, "index.idx");
-        return fileManager.deleteFile(fileName);
+        fileManager.saveSerializable((Serializable) listOfNotes, FILE_NAME);
+        return true;
+
     }
 }
