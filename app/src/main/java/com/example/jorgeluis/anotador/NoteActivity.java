@@ -2,23 +2,16 @@ package com.example.jorgeluis.anotador;
 
 
 
-import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.content.res.Configuration;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
 
-import com.example.jorgeluis.anotador.Activities.NoteActivityView;
-import com.example.jorgeluis.anotador.Presenter.MainPresenter;
+import com.example.jorgeluis.anotador.Views.NoteActivityView;
 import com.example.jorgeluis.anotador.Presenter.NotePresenter;
-import com.example.jorgeluis.anotador.Services.MainActivityServices;
 import com.example.jorgeluis.anotador.Services.NoteActivityServices;
 import com.example.jorgeluis.anotador.Util.AndroidFileManager;
 import com.example.jorgeluis.anotador.Util.BusProvider;
 import com.squareup.otto.Bus;
-
-import java.io.IOException;
 
 
 public class NoteActivity extends AppCompatActivity  {

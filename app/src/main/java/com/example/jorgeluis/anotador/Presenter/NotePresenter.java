@@ -4,7 +4,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.v7.app.AlertDialog;
 
-import com.example.jorgeluis.anotador.Activities.NoteActivityView;
+import com.example.jorgeluis.anotador.Views.NoteActivityView;
 import com.example.jorgeluis.anotador.Model.Note;
 import com.example.jorgeluis.anotador.NoteActivity;
 import com.example.jorgeluis.anotador.Services.NoteActivityServices;

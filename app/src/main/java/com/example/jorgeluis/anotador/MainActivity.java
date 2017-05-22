@@ -5,7 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import com.example.jorgeluis.anotador.Activities.MainActivityView;
+import com.example.jorgeluis.anotador.Views.MainActivityView;
 import com.example.jorgeluis.anotador.Presenter.MainPresenter;
 import com.example.jorgeluis.anotador.Services.MainActivityServices;
 import com.example.jorgeluis.anotador.Util.AndroidFileManager;

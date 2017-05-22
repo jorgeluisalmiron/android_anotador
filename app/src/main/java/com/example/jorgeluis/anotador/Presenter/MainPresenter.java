@@ -1,11 +1,10 @@
 package com.example.jorgeluis.anotador.Presenter;
 
 import android.content.Intent;
-import android.util.Log;
 
 
 import com.example.jorgeluis.anotador.AboutActivity;
-import com.example.jorgeluis.anotador.Activities.MainActivityView;
+import com.example.jorgeluis.anotador.Views.MainActivityView;
 import com.example.jorgeluis.anotador.Model.Note;
 import com.example.jorgeluis.anotador.NoteActivity;
 import com.example.jorgeluis.anotador.MainActivity;

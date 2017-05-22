@@ -1,13 +1,10 @@
-package com.example.jorgeluis.anotador.Activities;
+package com.example.jorgeluis.anotador.Views;
 
-import android.animation.Animator;
 import android.app.Activity;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
-import android.view.animation.AnimationUtils;
-import android.view.animation.Interpolator;
 import android.widget.TextView;
 import android.widget.Toast;
 

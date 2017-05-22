@@ -1,8 +1,7 @@
-package com.example.jorgeluis.anotador.Activities;
+package com.example.jorgeluis.anotador.Views;
 
 import android.app.Activity;
 import android.content.Context;
-import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.support.v7.widget.AppCompatImageButton;
 import android.text.Editable;
@@ -12,13 +11,9 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.jorgeluis.anotador.Model.Note;
 import com.example.jorgeluis.anotador.R;
 import com.example.jorgeluis.anotador.Util.ActivityView;
 import com.squareup.otto.Bus;
-
-import java.util.ArrayList;
-import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
